@@ -2,36 +2,38 @@
 
 // server.js sets up the Express application, specifies the API routes, and starts the server to listen for incoming requests.
 
-// import dependencies
+// Import dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { log, ExpressAPILogMiddleware } = require('@rama41222/node-logger');
+
+// Import API routes
 const apiRoutes = require('./routes/api');
 
-// server config
+// Server config
 let config = {
     name: 'melissa-everyrealm-burrito-api',
     port: 3000,
     host: '0.0.0.0',
 };
 
-// create object for express application
+// Create object for the Express application
 const app = express();
 const orders = {};
 
-// logger config
+// Logger config
 const logger = log({ console: true, file: false, label: config.name });
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use(ExpressAPILogMiddleware(logger, { request: true }));
 
-// tells Express to use the routes defined in the apiRoutes module when the path starts with '/api'.
+// Tell Express to use the routes defined in the apiRoutes module when the path starts with '/api'.
 app.use('/api', apiRoutes);
 
-// starts the Express server and logs out the server config
-if (process.env.NODE_ENV != 'test') {
+// Start the Express server and log out the server config
+if (process.env.NODE_ENV !== 'test') {
     app.listen(config.port, config.host, (e) => {
         if (e) {
             throw new Error('Internal Server Error');
