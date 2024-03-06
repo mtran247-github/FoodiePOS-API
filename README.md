@@ -16,7 +16,7 @@ Follow these instructions to get the project up and running.
 
 1. Clone the Repository
    
-git clone git@github.com:mtran247/burrito-side-project.git
+git clone [git@github.com:mtran247/burrito-side-project.git](https://github.com/mtran247-github/BurritoShop.git)
 ```bash
 cd burrito-side-project.git
 ```
