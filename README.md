@@ -78,9 +78,9 @@ npm test
 
 
 ## Features to Improve FoodiePOS
-1. Order Tracking and Status Updates:  WebSockets (for real-time communication), Redis (for caching order status) to enable real-time order tracking for customers and staff, allowing them to monitor the status of their orders from preparation to delivery
-2. Payment Integration: Integrate payment gateways such as Stripe API, PayPal API, Braintree SDK to support online payments for orders
-3. Inventory Management: PostgreSQL (for storing inventory data), WebSocket for real-time updates 
+1. **Order Tracking and Status Updates:**  WebSockets (for real-time communication), Redis (for caching order status) to enable real-time order tracking for customers and staff, allowing them to monitor the status of their orders from preparation to delivery
+2. **Payment Integration:** Integrate payment gateways such as Stripe API, PayPal API, Braintree SDK to support online payments for orders
+3. **Inventory Management:** PostgreSQL (for storing inventory data), WebSocket for real-time updates 
 
 
 Feel free to explore the API endpoints and enjoy ordering delicious burritos!
